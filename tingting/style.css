@@ -1,0 +1,210 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #ffe6f2;
+    color: #ff69b4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffcccb;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ff1493;
+}
+
+.intro {
+    text-align: center;
+    margin: 20px;
+}
+
+.intro img {
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid #ff69b4;
+}
+
+.features {
+    background-color: #fff0f5;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.features h2 {
+    color: #ff1493;
+}
+
+.features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.features li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.gallery {
+    text-align: center;
+    margin: 20px;
+}
+
+.gallery .images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 3px solid #ff69b4;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffcccb;
+    color: #ff1493;
+}
+
+/* 标题动画 */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+h1 {
+    animation: bounce 2s infinite;
+}
+
+/* 图片悬停动画 */
+.intro img {
+    transition: transform 0.3s ease;
+}
+
+.intro img:hover {
+    transform: scale(1.1);
+}
+
+/* 画廊图片悬停效果 */
+.gallery img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+}
+
+
+/* 移动设备优化 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .intro img {
+        width: 150px;
+    }
+
+    .gallery .images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery img {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+
+body {
+    background: linear-gradient(45deg, #ffe6f2, #ffcccb);
+}
+
+header {
+    background: url('images/pattern.png') repeat;
+    background-color: rgba(255, 204, 203, 0.8);
+}
+
+footer {
+    background: url('images/pattern.png') repeat;
+    background-color: rgba(255, 204, 203, 0.8);
+}
+/*视频*/
+.video-section {
+    text-align: center;
+    margin: 10px;
+}
+
+.video-container {
+    max-width: 700px;
+    margin: 0 auto;
+    border: 5px solid #ff69b4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+}
+
+video {
+    width: 100%;
+    display: block;
+}
+
+
+.parallax {
+    background-image: url('images/melody-bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/* 樱花背景样式 */
+.sakura-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: linear-gradient(45deg, #ffe6f2, #ffcccb);
+}
+
+.sakura {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ff69b4;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10%);
+    }
+    100% {
+        transform: translateY(110%);
+    }
+}
